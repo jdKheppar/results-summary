@@ -1,2 +1,1 @@
-# results-summary
-Result Summary Project Challenge from Frontend Mentor
+Created using html css and javascirpt. Challenge from Frontend Mentor
