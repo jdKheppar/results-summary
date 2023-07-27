@@ -48,12 +48,12 @@
       }
 
       body {
-        font-size: 18px;
         font-family: "Hanken Grotesk", sans-serif;
+        background-color: var(--clr-pale-blue);
       }
       .container {
         margin: 100px auto;
-        width: 60vw;
+        width: 50vw;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
@@ -63,35 +63,37 @@
         align-items: center;
         flex-direction: column;
         color: white;
-        background-color: var(--bg-slate-blue);
+        background-color: var(--bg-royal-blue);
         border-radius: 30px;
       }
       .score_circle {
+        height: 70%;
+        width: 70%;
         display: flex;
-        align-items: center;
         flex-direction: column;
-        height: 200px;
-        width: 200px;
+        align-items: center;
         border-radius: 100%;
-        background-color: var(--bg-royal-blue);
+        background-color: var(--clr-cobalt-blue);
       }
       .score_number {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
       .score_desc {
         width: 80%;
+        color: var(--clr-light-lavender);
       }
       .summary {
         background-color: var(--clr-white);
         padding: 20px;
-        border-radius: 30px;
-        box-shadow: inset 0 3em 3em rgba(0, 0, 0, 0.1),
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: inset 0 3rem 3rem rgba(0, 0, 0, 0.1),
           0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
       }
 
       .property {
         display: flex;
-        margin-top: 5px;
+        margin-top: 10px;
         justify-content: space-around;
       }
       .reaction {
@@ -129,10 +131,11 @@
       /* For Mobile size screens */
       @media only screen and (max-width: 500px) {
         .container {
-          margin: 50px auto;
-          width: 100vw;
+          margin: 00px auto;
+          width: 100%;
           display: grid;
           grid-template-columns: auto;
+          border-color: white;
         }
         .btn {
           font-size: 1rem;
@@ -144,14 +147,18 @@
         }
 
         .score {
-          border-radius: 25px;
+          padding: 15px 30px;
+          border-radius: 0;
+          margin: 0;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
         }
         .score_circle {
-          height: 150px;
-          width: 150px;
+          height: 180px;
+          width: 180px;
         }
         .score_number {
-          font-size: 2rem;
+          font-size: 3rem;
         }
         .score_desc {
           width: 80%;
@@ -169,7 +176,7 @@
       @media only screen and (max-width: 1000px) and (min-width: 501px) {
         .container {
           margin: 60px auto;
-          width: 80vw;
+          width: 80%;
         }
         .btn {
           font-size: 1rem;
@@ -193,6 +200,7 @@
         }
         .score_desc {
           width: 90%;
+          font-size: 18px;
         }
         .summary {
           padding: 10px;
@@ -206,58 +214,61 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="score">
-        <h2>Your Result</h2>
-        <div class="score_circle">
-          <h1 class="score_number">76</h1>
-          <p>of 100</p>
+    <main>
+      <div class="container">
+        <div class="score">
+          <h2>Your Result</h2>
+          <div class="score_circle">
+            <h1 class="score_number">76</h1>
+            <p>of 100</p>
+          </div>
+
+          <h1>Great</h1>
+          <p class="score_desc">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
         </div>
+        <div class="summary">
+          <h2>Summary</h2>
+          <div class="properties">
+            <div class="property reaction">
+              <div class="icon-category">
+                <img class="icon" src="" alt="" />
+                <p class="category"></p>
+              </div>
 
-        <h1>Great</h1>
-        <p class="score_desc">
-          You scored higher than 65% of the people who have taken these tests.
-        </p>
-      </div>
-      <div class="summary">
-        <h2>Summary</h2>
-        <div class="properties">
-          <div class="property reaction">
-            <div class="icon-category">
-              <img class="icon" src="" alt="" />
-              <p class="category"></p>
+              <p class="property-score"></p>
             </div>
+            <div class="property memory">
+              <div class="icon-category">
+                <img class="icon" src="" alt="" />
+                <p class="category"></p>
+              </div>
 
-            <p class="property-score"></p>
-          </div>
-          <div class="property memory">
-            <div class="icon-category">
-              <img class="icon" src="" alt="" />
-              <p class="category"></p>
+              <p class="property-score"></p>
             </div>
+            <div class="property verbal">
+              <div class="icon-category">
+                <img class="icon" src="" alt="" />
+                <p class="category"></p>
+              </div>
 
-            <p class="property-score"></p>
-          </div>
-          <div class="property verbal">
-            <div class="icon-category">
-              <img class="icon" src="" alt="" />
-              <p class="category"></p>
+              <p class="property-score"></p>
             </div>
+            <div class="property visual">
+              <div class="icon-category">
+                <img class="icon" src="" alt="" />
+                <p class="category"></p>
+              </div>
 
-            <p class="property-score"></p>
-          </div>
-          <div class="property visual">
-            <div class="icon-category">
-              <img class="icon" src="" alt="" />
-              <p class="category"></p>
+              <p class="property-score"></p>
             </div>
-
-            <p class="property-score"></p>
           </div>
+          <button class="btn">Continue</button>
         </div>
-        <button class="btn">Continue</button>
       </div>
-    </div>
+    </main>
+
     <script>
       // your-script.js
       // Fetch the data from data.json using JavaScript's Fetch API
