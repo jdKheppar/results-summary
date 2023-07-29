@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/jdKheppar/results-summary/]
 - Live Site URL: [https://jdkheppar.github.io/results-summary/]
 
 ## My process
